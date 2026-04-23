@@ -41,7 +41,7 @@ body {
   }
 
   .glass-card {
-    @apply rounded-2xl border border-border/90 bg-panel/70 shadow-glow backdrop-blur-md;
+    @apply rounded-2xl border border-border bg-panel shadow-glow backdrop-blur-md;
   }
 
   .text-gradient {
