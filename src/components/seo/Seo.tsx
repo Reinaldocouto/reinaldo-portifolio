@@ -55,15 +55,20 @@ export function Seo({ title, description, image, url, type = 'website', canonica
 
     setMetaTag('name', 'description', resolvedDescription);
     setMetaTag('property', 'og:site_name', site.seo.siteName);
+    setMetaTag('property', 'og:locale', site.locale);
     setMetaTag('property', 'og:title', resolvedTitle);
     setMetaTag('property', 'og:description', resolvedDescription);
     setMetaTag('property', 'og:type', type);
     setMetaTag('property', 'og:url', resolvedUrl);
     setMetaTag('property', 'og:image', resolvedImage);
+    setMetaTag('property', 'og:image:alt', resolvedTitle);
     setMetaTag('name', 'twitter:card', 'summary_large_image');
     setMetaTag('name', 'twitter:title', resolvedTitle);
     setMetaTag('name', 'twitter:description', resolvedDescription);
     setMetaTag('name', 'twitter:image', resolvedImage);
+    setMetaTag('name', 'twitter:url', resolvedUrl);
+    setMetaTag('name', 'twitter:site', site.seo.twitterHandle);
+    setMetaTag('name', 'robots', 'index,follow');
     setCanonical(resolvedCanonical);
 
     const existingScript = document.getElementById('seo-json-ld');

@@ -10,7 +10,7 @@ const socialIconMap = {
 
 export function Hero() {
   return (
-    <section id="top" className="section-padding hero-section relative overflow-hidden pb-14 pt-28 md:pb-20 md:pt-36">
+    <section id="top" className="section-padding hero-section relative overflow-hidden pb-12 pt-28 md:pb-16 md:pt-36">
       <div className="hero-grid pointer-events-none absolute inset-0 z-0" />
       <div className="hero-glow animate-glow-pulse pointer-events-none absolute -top-48 left-1/2 z-10 h-[500px] w-[900px] -translate-x-1/2 blur-[120px]" />
       <div className="hero-glow-secondary animate-glow-pulse-soft pointer-events-none absolute -top-36 left-1/2 z-10 h-[380px] w-[680px] -translate-x-1/2 blur-[90px]" />
@@ -36,7 +36,7 @@ export function Hero() {
             <span className="block md:whitespace-nowrap">
               {site.hero.headlineTop} <span className="text-gradient inline-block">{site.hero.headlineAccent}</span>
             </span>
-            <span className="mt-4 block text-xl font-medium leading-snug text-slate-200 md:text-2xl">{site.hero.headlineBottom}</span>
+            <span className="mt-4 block max-w-3xl text-xl font-medium leading-snug text-slate-200 md:text-2xl">{site.hero.headlineBottom}</span>
           </h1>
 
           <p className="max-w-2xl text-base leading-relaxed text-muted md:max-w-xl">{site.hero.description}</p>
@@ -79,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.18 }}
-          className="md:col-span-5 hidden md:block"
+          className="hidden md:col-span-5 md:block"
         >
           <aside className="glass-card shadow-elegant rounded-2xl p-6 lg:mt-5">
             <div className="mb-5 flex items-center gap-2">
@@ -110,10 +110,7 @@ export function Hero() {
 
             <div className="mt-6 grid grid-cols-3 gap-2">
               {site.hero.profileCard.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-md border border-border bg-panel/50 px-2 py-1.5 text-center font-mono text-[11px] text-muted"
-                >
+                <span key={tag} className="rounded-md border border-border/55 bg-panel/38 px-2 py-1.5 text-center font-mono text-[11px] text-muted">
                   {tag}
                 </span>
               ))}
