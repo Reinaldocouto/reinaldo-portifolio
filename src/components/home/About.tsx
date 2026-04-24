@@ -6,7 +6,7 @@ export function About() {
       <div className="container-tight space-y-8">
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-[0.24em] text-muted">Sobre</p>
-          <h2 className="text-3xl font-semibold md:text-4xl">Posicionamento técnico com leitura de produto e operação.</h2>
+          <h2 className="text-3xl font-semibold md:text-4xl">Visão estratégica para transformar contexto complexo em produto utilizável.</h2>
         </header>
 
         <div className="grid gap-5 md:grid-cols-2">

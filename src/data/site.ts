@@ -26,17 +26,20 @@ export type ExperienceItem = {
 
 export const site = {
   name: 'Reinaldo Couto',
-  role: 'Desenvolvedor com visão de produto e operação',
-  tagline: 'Sistemas web úteis, com contexto real de uso e execução consistente.',
+  brand: 'reinaldo.',
+  role: 'Desenvolvedor front-end com visão de produto e operação',
+  tagline: 'Produtos web com clareza estratégica, execução técnica e foco em resultado real.',
   locale: 'pt-BR',
-  availability: 'Disponível para novos projetos',
+  availability: 'Disponível para novos projetos e oportunidades estratégicas',
   hero: {
-    eyebrow: 'Product-minded Web Developer',
-    headline: 'Construo produtos web com clareza de negócio, operação real e execução técnica sólida.',
+    eyebrow: 'Produto, operação e engenharia no mesmo nível de prioridade.',
+    headlineTop: 'Reinaldo',
+    headlineAccent: 'Couto',
+    headlineBottom: 'Desenvolvedor front-end para produtos digitais de contexto real.',
     description:
-      'Atuo da estratégia ao front-end de produção, conectando contexto comercial, fluxo operacional e entrega com padrão de produto sério.',
+      'Construo experiências web que conectam negócio, operação e usabilidade. Da decisão de produto à entrega em produção, foco em fluxo claro, estética premium e software que sustenta crescimento.',
     primaryCta: {
-      label: 'Ver cases',
+      label: 'Ver projetos reais',
       href: '#projetos',
     },
     secondaryCta: {
@@ -46,104 +49,98 @@ export const site = {
     socialLinks: [
       { label: 'GitHub', href: 'https://github.com/reinaldocouto' },
       { label: 'LinkedIn', href: 'https://linkedin.com/in/reinaldocouto' },
-      { label: 'Currículo', href: '#' },
     ],
     profileCard: {
-      title: 'profile.sys',
+      title: 'profile.overview',
       lines: [
-        'foco: produto + engenharia',
-        'contexto: operação real',
-        'stack: react · typescript',
-        'entrega: front-end premium',
+        'especialidade: front-end para sistemas web',
+        'foco: produto, operação e execução técnica',
+        'entrega: interfaces robustas e orientadas a contexto',
+        'disponibilidade: projetos com impacto real',
       ],
     },
   },
   navigation: [
+    { label: 'Início', href: '#top' },
     { label: 'Projetos', href: '#projetos' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Stack', href: '#stack' },
-    { label: 'Experiência', href: '#experiencia' },
     { label: 'Contato', href: '#contato' },
   ] satisfies NavItem[],
   highlights: [
     {
-      title: 'Sistemas reais, sem vitrine vazia',
-      description: 'Projetos guiados por contexto de uso, operação e resultado mensurável no dia a dia.',
+      title: 'Projetos reais, com prova visual',
+      description: 'Portfólio baseado em produtos publicados, fluxos completos e decisões aplicadas em cenário de uso.',
     },
     {
-      title: 'Visão de produto aplicada',
-      description: 'Decisões de interface conectadas a prioridade, risco e impacto comercial.',
+      title: 'Produto e operação como base',
+      description: 'Cada interface nasce com leitura de contexto, prioridade de negócio e impacto no dia a dia da operação.',
     },
     {
-      title: 'Execução técnica integrada',
-      description: 'Front-end moderno com arquitetura limpa, integração e consistência visual de produto.',
+      title: 'Execução técnica consistente',
+      description: 'Arquitetura front-end limpa, componentes reutilizáveis e padrão visual coerente para evolução contínua.',
     },
     {
-      title: 'Ritmo de entrega confiável',
-      description: 'Planejamento objetivo, comunicação clara e evolução contínua sem ruído desnecessário.',
+      title: 'Comunicação clara e ritmo',
+      description: 'Condução objetiva de escopo, alinhamento frequente e entregas incrementais com previsibilidade.',
     },
   ] satisfies HighlightItem[],
   about: [
     {
-      title: 'Quem sou',
-      body: 'Sou desenvolvedor web com repertório de produto e operação. Meu trabalho combina visão sistêmica com execução prática para transformar demandas complexas em soluções utilizáveis e sustentáveis.',
+      title: 'Atuação',
+      body: 'Sou desenvolvedor front-end com repertório em produto digital. Estruturo experiências que resolvem problemas reais sem sacrificar clareza visual, desempenho ou manutenção.',
     },
     {
-      title: 'Diferencial',
-      body: 'Além de construir interfaces, estruturo fluxos e prioridades com olhar de negócio. Isso reduz retrabalho, acelera decisões e entrega software que funciona no contexto real.',
+      title: 'Como penso',
+      body: 'Antes de escrever código, organizo fluxo, contexto e critério de decisão. Isso reduz retrabalho, acelera validação e aumenta a confiança do time no produto entregue.',
     },
   ] satisfies AboutBlock[],
   stackGroups: [
     {
-      title: 'Front-end',
-      items: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Design System'],
+      title: 'Front-end de produto',
+      items: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion (com moderação)', 'Arquitetura de componentes'],
     },
     {
-      title: 'Back-end & dados',
-      items: ['Node.js', 'APIs REST', 'Integrações', 'Modelagem de dados', 'SQL'],
+      title: 'Integração e dados',
+      items: ['APIs REST', 'Autenticação', 'Modelagem de estado', 'Mapas e geolocalização', 'Consumo de dados em tempo real'],
     },
     {
-      title: 'Produto & processo',
-      items: ['Discovery orientado a contexto', 'Priorização', 'Documentação técnica', 'Execução incremental'],
+      title: 'Processo e qualidade',
+      items: ['Leitura de contexto', 'Priorização por impacto', 'Documentação objetiva', 'Entrega incremental', 'Refinamento contínuo'],
     },
   ] satisfies StackGroup[],
   experience: [
     {
-      title: 'Desenvolvimento de produtos web',
-      period: 'Fase atual',
-      summary:
-        'Construção de soluções web orientadas a operação, com foco em clareza de fluxo, performance e experiência premium.',
+      title: 'Produtos web orientados à operação',
+      period: 'Atuação atual',
+      summary: 'Desenvolvimento de sistemas com foco em clareza de fluxo, confiabilidade e experiência premium em rotinas críticas.',
     },
     {
-      title: 'Consolidação e prática autoral',
+      title: 'Construção autoral de casos completos',
       period: 'Evolução contínua',
-      summary:
-        'Criação de projetos próprios para aprofundar padrões de arquitetura, interface e comunicação de produto.',
+      summary: 'Criação e publicação de projetos próprios para aprofundar domínio técnico, narrativa de produto e validação de decisões.',
     },
     {
-      title: 'Contexto crítico anterior',
-      period: 'Base estratégica',
-      summary:
-        'Vivência em ambientes de pressão e decisão que fortaleceu disciplina, leitura de cenário e capacidade de execução.',
+      title: 'Base de execução sob pressão',
+      period: 'Fundação profissional',
+      summary: 'Vivência em ambientes exigentes, fortalecendo disciplina, senso de prioridade e consistência na entrega.',
     },
   ] satisfies ExperienceItem[],
   contact: {
-    title: 'Vamos construir algo relevante?',
+    title: 'Vamos tirar seu produto do rascunho e colocar em produção?',
     description:
-      'Aberto a projetos, posições e parcerias em produtos digitais que exigem visão de negócio, qualidade de execução e compromisso com resultado.',
+      'Se você busca alguém para transformar contexto complexo em interface clara, posso contribuir com visão de produto e execução técnica de ponta a ponta.',
     channels: [
-      { label: 'WhatsApp', value: '+55 11 98999-0000', href: 'https://wa.me/5511989990000' },
-      { label: 'E-mail', value: 'contato@reinaldocouto.dev', href: 'mailto:contato@reinaldocouto.dev' },
       { label: 'LinkedIn', value: '/in/reinaldocouto', href: 'https://linkedin.com/in/reinaldocouto' },
-      { label: 'Telefone', value: '+55 11 98999-0000', href: 'tel:+5511989990000' },
+      { label: 'GitHub', value: 'github.com/reinaldocouto', href: 'https://github.com/reinaldocouto' },
     ],
   },
   footer: {
-    note: 'Construído com foco em produto, clareza e execução.',
+    note: 'Portfólio construído com foco em contexto real, execução sólida e evolução contínua.',
   },
   seo: {
-    title: 'Reinaldo Couto — Product & Web Systems',
+    title: 'Reinaldo Couto — Front-end, Produto e Operação',
     description:
-      'Portfólio profissional de Reinaldo Couto com foco em produto, operação e execução técnica em sistemas web.',
+      'Portfólio de Reinaldo Couto com projetos reais, foco em produto digital e execução front-end para sistemas web de contexto operacional.',
   },
 } as const;
