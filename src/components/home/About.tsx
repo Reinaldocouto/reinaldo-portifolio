@@ -11,9 +11,9 @@ export function About() {
 
         <div className="grid gap-5 md:grid-cols-2">
           {site.about.map((block) => (
-            <article key={block.title} className="glass-card p-6">
+            <article key={block.title} className="glass-card p-6 md:p-7">
               <h3 className="text-xl font-semibold">{block.title}</h3>
-              <p className="mt-3 text-muted">{block.body}</p>
+              <p className="mt-3 leading-relaxed text-muted">{block.body}</p>
             </article>
           ))}
         </div>
