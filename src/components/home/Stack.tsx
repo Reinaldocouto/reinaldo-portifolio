@@ -11,9 +11,9 @@ export function Stack() {
 
         <div className="grid gap-5 md:grid-cols-3">
           {site.stackGroups.map((group) => (
-            <article key={group.title} className="glass-card p-6">
+            <article key={group.title} className="glass-card p-6 md:p-7">
               <h3 className="text-lg font-semibold">{group.title}</h3>
-              <ul className="mt-3 space-y-2">
+              <ul className="mt-3 space-y-2.5">
                 {group.items.map((item) => (
                   <li key={item} className="text-sm text-muted">
                     {item}

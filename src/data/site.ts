@@ -24,13 +24,28 @@ export type ExperienceItem = {
   summary: string;
 };
 
+type ContactChannel = {
+  label: string;
+  value: string;
+  href: string;
+};
+
 export const site = {
   name: 'Reinaldo Couto',
   brand: 'reinaldo.',
   role: 'Desenvolvedor front-end para produto e operação',
   tagline: 'Interfaces claras para produtos que precisam rodar bem no dia a dia.',
   locale: 'pt-BR',
+  baseUrl: 'https://reinaldo-portifolio.vercel.app',
   availability: 'Disponível para novos projetos',
+  contactInfo: {
+    email: 'reinaldocouto10@gmail.com',
+    phone: '(11) 99538-4270',
+    whatsappUrl: 'https://wa.me/5511995384270',
+    githubUrl: 'https://github.com/Reinaldocouto',
+    linkedinUrl: 'https://linkedin.com/in/reinaldo-couto',
+    resumeUrl: '/reinaldo_couto_cv.pdf',
+  },
   hero: {
     eyebrow: 'Produto, operação e execução técnica no mesmo nível.',
     headlineTop: 'Reinaldo',
@@ -42,15 +57,16 @@ export const site = {
       href: '#projetos',
     },
     secondaryCta: {
-      label: 'Falar comigo',
-      href: '#contato',
+      label: 'Baixar currículo',
+      href: '/reinaldo_couto_cv.pdf',
     },
     socialLinks: [
-      { label: 'GitHub', href: 'https://github.com/reinaldocouto' },
-      { label: 'LinkedIn', href: 'https://linkedin.com/in/reinaldocouto' },
+      { label: 'GitHub', href: 'https://github.com/Reinaldocouto' },
+      { label: 'LinkedIn', href: 'https://linkedin.com/in/reinaldo-couto' },
+      { label: 'WhatsApp', href: 'https://wa.me/5511995384270' },
     ],
     profileCard: {
-      title: 'Resumo rápido',
+      title: 'Resumo profissional',
       lines: ['Foco em sistemas web de operação', 'Da estratégia de produto à entrega em produção', 'Execução técnica com padrão visual consistente'],
     },
   },
@@ -68,7 +84,7 @@ export const site = {
     },
     {
       title: 'Visão de produto',
-      description: 'Interface conectada a operação, prioridade e resultado.',
+      description: 'Interface conectada à operação, prioridade e resultado.',
     },
     {
       title: 'Execução consistente',
@@ -121,20 +137,28 @@ export const site = {
     },
   ] satisfies ExperienceItem[],
   contact: {
-    title: 'Vamos tirar seu produto do rascunho e colocar em produção?',
+    title: 'Vamos colocar seu produto em produção com clareza e ritmo?',
     description:
-      'Se você busca alguém para transformar contexto complexo em interface clara, posso contribuir com visão de produto e execução técnica de ponta a ponta.',
+      'Se você precisa transformar contexto complexo em interface confiável, posso contribuir com visão de produto e execução técnica de ponta a ponta.',
     channels: [
-      { label: 'LinkedIn', value: '/in/reinaldocouto', href: 'https://linkedin.com/in/reinaldocouto' },
-      { label: 'GitHub', value: 'github.com/reinaldocouto', href: 'https://github.com/reinaldocouto' },
-    ],
+      { label: 'E-mail', value: 'reinaldocouto10@gmail.com', href: 'mailto:reinaldocouto10@gmail.com' },
+      { label: 'WhatsApp', value: '(11) 99538-4270', href: 'https://wa.me/5511995384270' },
+      { label: 'LinkedIn', value: 'linkedin.com/in/reinaldo-couto', href: 'https://linkedin.com/in/reinaldo-couto' },
+      { label: 'GitHub', value: 'github.com/Reinaldocouto', href: 'https://github.com/Reinaldocouto' },
+      { label: 'Currículo', value: 'PDF atualizado', href: '/reinaldo_couto_cv.pdf' },
+    ] satisfies ContactChannel[],
   },
   footer: {
     note: 'Portfólio construído com foco em contexto real, execução sólida e evolução contínua.',
   },
   seo: {
-    title: 'Reinaldo Couto — Front-end, Produto e Operação',
-    description:
-      'Portfólio de Reinaldo Couto com projetos reais, foco em produto digital e execução front-end para sistemas web de contexto operacional.',
+    siteName: 'Portfólio de Reinaldo Couto',
+    defaultTitle: 'Reinaldo Couto — Front-end para produto e operação',
+    defaultDescription:
+      'Portfólio de Reinaldo Couto com cases reais de produto digital, front-end em React e foco em clareza operacional.',
+    homeTitle: 'Reinaldo Couto | Front-end para produto digital e operação',
+    homeDescription:
+      'Desenvolvedor front-end com foco em produto, operação e experiência consistente. Conheça cases completos com decisões, trade-offs e resultados.',
+    ogImage: '/projects/togo.jpeg',
   },
 } as const;

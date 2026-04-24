@@ -18,8 +18,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8">
       <div
-        className={`mx-auto flex w-full max-w-6xl items-center justify-between rounded-2xl border px-4 py-2.5 transition-all md:px-6 ${
-          isScrolled ? 'border-border/60 bg-panel/72 shadow-glow backdrop-blur-xl' : 'border-border/35 bg-panel/38 backdrop-blur-lg'
+        className={`mx-auto flex w-full max-w-6xl items-center justify-between rounded-2xl border px-4 py-2 transition-all md:px-5 ${
+          isScrolled ? 'border-border/45 bg-panel/65 backdrop-blur-xl' : 'border-border/30 bg-panel/35 backdrop-blur-lg'
         }`}
       >
         <a href="#top" className="text-base font-semibold tracking-wide text-text">
@@ -36,14 +36,14 @@ export function Navbar() {
 
         <a
           href="#contato"
-          className="hidden rounded-lg border border-primary/40 bg-primary/12 px-3.5 py-2 text-sm font-medium text-slate-100 transition hover:bg-primary/20 md:inline-flex"
+          className="hidden rounded-lg border border-primary/25 bg-primary/10 px-3.5 py-2 text-sm font-medium text-slate-100 transition hover:bg-primary/18 md:inline-flex"
         >
           Falar comigo
         </a>
 
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex rounded-lg border border-border/70 bg-panel/60 p-2 text-slate-100 md:hidden"
+          className="inline-flex rounded-lg border border-border/60 bg-panel/50 p-2 text-slate-100 md:hidden"
           aria-label="Abrir menu"
         >
           {isOpen ? <X size={18} /> : <Menu size={18} />}
@@ -51,13 +51,13 @@ export function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="mx-auto mt-2 w-full max-w-6xl rounded-2xl border border-border/70 bg-panel/90 p-4 shadow-glow backdrop-blur-xl md:hidden">
+        <div className="mx-auto mt-2 w-full max-w-6xl rounded-2xl border border-border/60 bg-panel/90 p-4 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-1.5">
             {site.navigation.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="rounded-md px-2 py-2 text-sm text-muted transition-colors hover:bg-bg/35 hover:text-text"
+                className="rounded-md px-2 py-2 text-sm text-muted transition-colors hover:bg-bg/30 hover:text-text"
                 onClick={closeMenu}
               >
                 {item.label}
@@ -65,7 +65,7 @@ export function Navbar() {
             ))}
             <a
               href="#contato"
-              className="mt-2 rounded-md border border-primary/45 bg-primary/12 px-3 py-2 text-center text-sm font-medium text-slate-100"
+              className="mt-2 rounded-md border border-primary/35 bg-primary/12 px-3 py-2 text-center text-sm font-medium text-slate-100"
               onClick={closeMenu}
             >
               Falar comigo
