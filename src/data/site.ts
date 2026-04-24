@@ -27,19 +27,18 @@ export type ExperienceItem = {
 export const site = {
   name: 'Reinaldo Couto',
   brand: 'reinaldo.',
-  role: 'Desenvolvedor front-end com visão de produto e operação',
-  tagline: 'Produtos web com clareza estratégica, execução técnica e foco em resultado real.',
+  role: 'Desenvolvedor front-end para produto e operação',
+  tagline: 'Interfaces claras para produtos que precisam rodar bem no dia a dia.',
   locale: 'pt-BR',
-  availability: 'Disponível para novos projetos e oportunidades estratégicas',
+  availability: 'Disponível para novos projetos',
   hero: {
-    eyebrow: 'Produto, operação e engenharia no mesmo nível de prioridade.',
+    eyebrow: 'Produto, operação e execução técnica no mesmo nível.',
     headlineTop: 'Reinaldo',
     headlineAccent: 'Couto',
-    headlineBottom: 'Desenvolvedor front-end para produtos digitais de contexto real.',
-    description:
-      'Construo experiências web que conectam negócio, operação e usabilidade. Da decisão de produto à entrega em produção, foco em fluxo claro, estética premium e software que sustenta crescimento.',
+    headlineBottom: 'Front-end com foco em produto e operação real.',
+    description: 'Desenvolvo produtos web com leitura de contexto, fluxo limpo e entrega técnica consistente.',
     primaryCta: {
-      label: 'Ver projetos reais',
+      label: 'Ver projetos',
       href: '#projetos',
     },
     secondaryCta: {
@@ -51,13 +50,8 @@ export const site = {
       { label: 'LinkedIn', href: 'https://linkedin.com/in/reinaldocouto' },
     ],
     profileCard: {
-      title: 'profile.overview',
-      lines: [
-        'especialidade: front-end para sistemas web',
-        'foco: produto, operação e execução técnica',
-        'entrega: interfaces robustas e orientadas a contexto',
-        'disponibilidade: projetos com impacto real',
-      ],
+      title: 'Resumo rápido',
+      lines: ['Foco em sistemas web de operação', 'Da estratégia de produto à entrega em produção', 'Execução técnica com padrão visual consistente'],
     },
   },
   navigation: [
@@ -69,20 +63,20 @@ export const site = {
   ] satisfies NavItem[],
   highlights: [
     {
-      title: 'Projetos reais, com prova visual',
-      description: 'Portfólio baseado em produtos publicados, fluxos completos e decisões aplicadas em cenário de uso.',
+      title: 'Projetos publicados',
+      description: 'Cases com produto no ar, contexto real e decisões aplicadas.',
     },
     {
-      title: 'Produto e operação como base',
-      description: 'Cada interface nasce com leitura de contexto, prioridade de negócio e impacto no dia a dia da operação.',
+      title: 'Visão de produto',
+      description: 'Interface conectada a operação, prioridade e resultado.',
     },
     {
-      title: 'Execução técnica consistente',
-      description: 'Arquitetura front-end limpa, componentes reutilizáveis e padrão visual coerente para evolução contínua.',
+      title: 'Execução consistente',
+      description: 'Componentes claros, código escalável e evolução contínua.',
     },
     {
-      title: 'Comunicação clara e ritmo',
-      description: 'Condução objetiva de escopo, alinhamento frequente e entregas incrementais com previsibilidade.',
+      title: 'Comunicação objetiva',
+      description: 'Alinhamento frequente com foco em entrega previsível.',
     },
   ] satisfies HighlightItem[],
   about: [

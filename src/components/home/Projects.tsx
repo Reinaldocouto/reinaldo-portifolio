@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { projects } from '../../data/projects';
 
 const accentStyles = {
-  blue: 'from-sky-500/25 via-sky-400/5 to-transparent border-sky-500/25',
-  violet: 'from-violet-500/25 via-violet-400/5 to-transparent border-violet-500/25',
-  emerald: 'from-emerald-500/25 via-emerald-400/5 to-transparent border-emerald-500/25',
+  blue: 'from-sky-500/20 via-sky-500/5 to-transparent border-sky-500/20',
+  violet: 'from-violet-500/18 via-violet-500/5 to-transparent border-violet-500/20',
+  emerald: 'from-emerald-500/18 via-emerald-500/5 to-transparent border-emerald-500/20',
 } as const;
 
 export function Projects() {
@@ -16,24 +16,22 @@ export function Projects() {
     <section id="projetos" className="section-padding">
       <div className="container-tight space-y-8">
         <header className="space-y-3">
-          <p className="text-xs uppercase tracking-[0.24em] text-muted">Projetos selecionados</p>
-          <h2 className="max-w-4xl text-3xl font-semibold leading-tight md:text-5xl">Produtos reais publicados, com contexto de negócio e execução de ponta a ponta.</h2>
-          <p className="max-w-3xl text-muted">
-            Cada case combina interface, arquitetura e decisão de produto para resolver problemas concretos de operação, experiência e crescimento.
-          </p>
+          <p className="text-xs uppercase tracking-[0.22em] text-muted">Projetos selecionados</p>
+          <h2 className="max-w-4xl text-3xl font-semibold leading-tight md:text-5xl">Cases com execução real, foco em produto e profundidade técnica.</h2>
+          <p className="max-w-3xl text-muted">Cada projeto mostra contexto, decisões e trade-offs para além da interface final.</p>
         </header>
 
         <div className="grid gap-5 lg:grid-cols-3">
           <article className={`glass-card relative overflow-hidden border bg-gradient-to-br p-6 lg:col-span-2 ${accentStyles[featured.accent]}`}>
-            <img src={featured.cover} alt={`Capa do projeto ${featured.name}`} className="mb-5 aspect-[16/7] w-full rounded-xl border border-border object-cover" />
-            <p className="text-xs uppercase tracking-[0.2em] text-muted">Projeto principal</p>
+            <img src={featured.cover} alt={`Capa do projeto ${featured.name}`} className="mb-6 aspect-[16/8] w-full rounded-xl border border-border/60 object-cover" />
+            <p className="text-xs uppercase tracking-[0.18em] text-muted">Projeto principal</p>
             <h3 className="mt-2 text-3xl font-semibold">{featured.name}</h3>
             <p className="mt-2 text-base text-slate-200">{featured.tagline}</p>
             <p className="mt-3 text-muted">{featured.summary}</p>
 
             <ul className="mt-5 grid gap-2 md:grid-cols-3">
               {featured.highlights.map((item) => (
-                <li key={item} className="rounded-lg border border-border/80 bg-bg/60 px-3 py-2 text-sm text-slate-200">
+                <li key={item} className="rounded-lg border border-border/60 bg-bg/45 px-3 py-2 text-sm text-slate-200">
                   {item}
                 </li>
               ))}
@@ -41,7 +39,7 @@ export function Projects() {
 
             <div className="mt-5 flex flex-wrap gap-2">
               {featured.tags.map((tag) => (
-                <span key={tag} className="rounded-full border border-border px-3 py-1 text-xs text-muted">
+                <span key={tag} className="rounded-full border border-border/65 bg-panel/50 px-3 py-1 text-xs text-muted">
                   {tag}
                 </span>
               ))}
@@ -52,11 +50,14 @@ export function Projects() {
                 href={featured.demoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium"
+                className="inline-flex items-center gap-2 rounded-lg border border-border/70 bg-panel/40 px-4 py-2 text-sm font-medium transition hover:bg-panel/70"
               >
                 Ver demo <ArrowUpRight size={15} />
               </a>
-              <Link to={`/projetos/${featured.slug}`} className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-bg">
+              <Link
+                to={`/projetos/${featured.slug}`}
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-bg transition hover:bg-primary/90"
+              >
                 {featured.caseHint}
               </Link>
             </div>
@@ -64,8 +65,8 @@ export function Projects() {
 
           <div className="grid gap-5">
             {secondary.map((project) => (
-              <article key={project.slug} className={`glass-card border bg-gradient-to-br p-5 ${accentStyles[project.accent]}`}>
-                <img src={project.cover} alt={`Capa do projeto ${project.name}`} className="mb-4 aspect-[16/9] w-full rounded-lg border border-border object-cover" />
+              <article key={project.slug} className={`rounded-2xl border bg-gradient-to-br p-5 ${accentStyles[project.accent]}`}>
+                <img src={project.cover} alt={`Capa do projeto ${project.name}`} className="mb-4 aspect-[16/9] w-full rounded-lg border border-border/60 object-cover" />
                 <h3 className="text-2xl font-semibold">{project.name}</h3>
                 <p className="mt-2 text-sm text-slate-200">{project.tagline}</p>
                 <p className="mt-2 text-sm text-muted">{project.summary}</p>

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #090b12;
-  --color-panel: #0f1421;
-  --color-border: #1e2738;
-  --color-text: #eff3ff;
-  --color-muted: #9aa7c2;
-  --color-primary: #5ea0ff;
-  --color-accent: #7f6dff;
+  --color-bg: #070b14;
+  --color-panel: #0c1322;
+  --color-border: #1f2a3f;
+  --color-text: #edf2ff;
+  --color-muted: #93a3bf;
+  --color-primary: #5c9dff;
+  --color-accent: #6ec7ff;
 }
 
 * {
@@ -30,13 +30,13 @@ body {
   @apply bg-bg text-text antialiased;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background-image:
-    radial-gradient(circle at 12% 15%, rgba(94, 160, 255, 0.15), transparent 45%),
-    radial-gradient(circle at 88% 10%, rgba(127, 109, 255, 0.16), transparent 48%),
-    linear-gradient(180deg, #090b12 0%, #090b12 100%);
+    radial-gradient(circle at 14% 14%, rgba(92, 157, 255, 0.1), transparent 44%),
+    radial-gradient(circle at 88% 12%, rgba(110, 199, 255, 0.08), transparent 50%),
+    linear-gradient(180deg, #070b14 0%, #070b14 100%);
 }
 
 ::selection {
-  background: rgba(94, 160, 255, 0.35);
+  background: rgba(92, 157, 255, 0.32);
   color: #ffffff;
 }
 
@@ -46,7 +46,7 @@ body {
   }
 
   .section-padding {
-    @apply py-14 md:py-20;
+    @apply py-16 md:py-24;
   }
 
   .glass-card {
@@ -54,7 +54,7 @@ body {
   }
 
   .text-gradient {
-    background: linear-gradient(120deg, var(--color-text) 0%, #c7d3f5 35%, var(--color-primary) 65%, var(--color-accent) 100%);
+    background: linear-gradient(120deg, var(--color-text) 0%, #d8e5ff 36%, var(--color-primary) 72%, var(--color-accent) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -65,18 +65,18 @@ body {
   }
 
   .hero-section {
-    background: linear-gradient(180deg, rgba(9, 11, 18, 0.75) 0%, rgba(9, 11, 18, 1) 85%);
+    background: linear-gradient(180deg, rgba(7, 11, 20, 0.82) 0%, rgba(7, 11, 20, 1) 84%);
   }
 
   .hero-grid {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
     background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, black 42%, transparent 80%);
   }
 
   .hero-glow {
-    background: radial-gradient(circle, rgba(94, 160, 255, 0.26) 0%, rgba(127, 109, 255, 0.18) 35%, transparent 68%);
+    background: radial-gradient(circle, rgba(92, 157, 255, 0.22) 0%, rgba(110, 199, 255, 0.14) 34%, transparent 68%);
   }
 }
