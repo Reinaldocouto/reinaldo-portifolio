@@ -14,12 +14,12 @@ export function Hero() {
       <div className="hero-grid pointer-events-none absolute inset-0" />
       <div className="hero-glow pointer-events-none absolute -top-32 left-1/2 h-[360px] w-[560px] -translate-x-1/2 blur-3xl" />
 
-      <div className="container-tight relative grid items-start gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:gap-11">
+      <div className="container-tight relative grid items-start gap-8 md:grid-cols-12 lg:gap-11">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: 'easeOut' }}
-          className="space-y-7"
+          className="space-y-7 md:col-span-7"
         >
           <span className="inline-flex rounded-full border border-primary/22 bg-primary/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.17em] text-primary">
             {site.availability}
@@ -69,21 +69,51 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <motion.aside
-          initial={{ opacity: 0, x: 22 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.12, ease: 'easeOut' }}
-          className="glass-card relative overflow-hidden p-5 md:p-6 lg:mt-5"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.65, delay: 0.18 }}
+          className="md:col-span-5 hidden md:block"
         >
-          <p className="mb-3 text-[11px] uppercase tracking-[0.16em] text-muted">{site.hero.profileCard.title}</p>
-          <div className="space-y-2.5 text-sm text-slate-200">
-            {site.hero.profileCard.lines.map((line) => (
-              <p key={line} className="rounded-md border border-border/35 bg-bg/30 px-3 py-2">
-                {line}
+          <aside className="glass-card shadow-elegant rounded-2xl p-6 lg:mt-5">
+            <div className="mb-5 flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-primary/70" />
+              <span className="ml-2 font-mono text-[11px] text-muted">{site.hero.profileCard.terminalLabel}</span>
+            </div>
+
+            <div className="space-y-1.5 font-mono text-[13px] leading-relaxed">
+              <p>
+                <span className="text-muted">const</span> <span className="text-primary">profile</span> = {'{'}
               </p>
-            ))}
-          </div>
-        </motion.aside>
+              <p className="pl-4">
+                <span className="text-accent">role:</span> "{site.hero.profileCard.role}",
+              </p>
+              <p className="pl-4">
+                <span className="text-accent">focus:</span> ["{site.hero.profileCard.focus[0]}", "{site.hero.profileCard.focus[1]}", "{site.hero.profileCard.focus[2]}"],
+              </p>
+              <p className="pl-4">
+                <span className="text-accent">stack:</span> ["{site.hero.profileCard.stack[0]}", "{site.hero.profileCard.stack[1]}", "{site.hero.profileCard.stack[2]}"],
+              </p>
+              <p className="pl-4">
+                <span className="text-accent">building:</span> "{site.hero.profileCard.building}",
+              </p>
+              <p>{'};'}</p>
+            </div>
+
+            <div className="mt-6 grid grid-cols-3 gap-2">
+              {site.hero.profileCard.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-md border border-border bg-panel/50 px-2 py-1.5 text-center font-mono text-[11px] text-muted"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </aside>
+        </motion.div>
       </div>
     </section>
   );
