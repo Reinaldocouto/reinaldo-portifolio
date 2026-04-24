@@ -85,7 +85,7 @@ export function Hero() {
             <div className="mb-5 flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
               <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
-              <span className="h-2.5 w-2.5 rounded-full bg-primary/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
               <span className="ml-2 font-mono text-[11px] text-muted">{site.hero.profileCard.terminalLabel}</span>
             </div>
 
