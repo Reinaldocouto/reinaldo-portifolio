@@ -4,6 +4,13 @@ export type ProjectGalleryItem = {
   caption: string;
 };
 
+export type ProjectSeo = {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  ogImage: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -28,159 +35,181 @@ export type Project = {
   caseHint: string;
   featured: boolean;
   accent: 'blue' | 'violet' | 'emerald';
+  seo: ProjectSeo;
 };
 
 export const projects: Project[] = [
   {
     slug: 'togo',
     name: 'TOGO',
-    tagline: 'Gestão operacional de ponta a ponta para rotina clínica e comercial.',
+    tagline: 'Gestão clínica e comercial em um fluxo único de operação.',
     summary:
-      'Sistema web de gestão com dashboard, agenda, cadastros, prontuário, estoque, PDV, financeiro e relatórios em um fluxo único.',
+      'Plataforma web com agenda, prontuário, estoque, PDV, financeiro e indicadores para leitura rápida da rotina.',
     cover: '/projects/togo.jpeg',
     demoUrl: 'https://togo-petcare-pro.vercel.app/',
-    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Form handling', 'Arquitetura modular'],
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Arquitetura modular', 'Form handling'],
     tags: ['React', 'TypeScript', 'Dashboard', 'Operação', 'PDV', 'Financeiro'],
-    highlights: ['Agenda e prontuário no mesmo fluxo', 'Estoque, PDV e financeiro integrados', 'Painéis para leitura rápida da operação'],
+    highlights: ['Agenda + prontuário no mesmo fluxo', 'Estoque, PDV e financeiro conectados', 'Painel de acompanhamento diário'],
     overview:
-      'O projeto nasceu para substituir uma rotina fragmentada por um sistema único de operação. A proposta foi organizar a jornada diária em módulos conectados, reduzindo troca de contexto e melhorando previsibilidade.',
+      'Projeto criado para substituir uma operação fragmentada por um sistema único, com foco em continuidade de trabalho e redução de perda de contexto.',
     problem:
-      'A operação dependia de planilhas e ferramentas isoladas, o que gerava retrabalho, inconsistência de dados e dificuldade para acompanhar atendimento e faturamento no mesmo ritmo.',
+      'A equipe alternava entre planilhas e ferramentas isoladas, gerando retrabalho, baixa rastreabilidade e atraso na tomada de decisão.',
     solution:
-      'Estruturei uma aplicação web com navegação por módulos e ações críticas centralizadas. O fluxo foi desenhado para diminuir fricção entre agenda, prontuário, caixa e fechamento financeiro.',
+      'Estruturei a experiência por tarefas operacionais, centralizando ações críticas em poucos cliques e com leitura imediata de status.',
     role:
-      'Atuei no front-end ponta a ponta: definição de fluxo, arquitetura de componentes, implementação das interfaces principais e refinamento contínuo de UX conforme o uso.',
+      'Responsável pelo front-end de ponta a ponta: desenho de fluxo, arquitetura de componentes, implementação e refinamento contínuo após validação.',
     productDecisions: [
-      'Priorização de telas com maior impacto na rotina diária antes de módulos acessórios.',
-      'Estrutura de navegação orientada por tarefas operacionais, não por área técnica.',
-      'Painel inicial com indicadores de ação imediata para reduzir tempo de leitura.',
+      'Priorizar módulos de maior impacto diário antes de funcionalidades secundárias.',
+      'Navegação orientada pela rotina da equipe, não pela estrutura interna do sistema.',
+      'Dashboard inicial com indicadores acionáveis para reduzir tempo de interpretação.',
     ],
     technicalChallenges: [
-      'Manter consistência visual e de interação em módulos com regras diferentes.',
-      'Equilibrar densidade de informação sem perder velocidade de uso.',
-      'Sustentar evolução de features sem quebrar componentes já consolidados.',
+      'Garantir consistência entre módulos com regras e densidades diferentes.',
+      'Sustentar performance em telas com alto volume de dados operacionais.',
+      'Evoluir funcionalidades sem quebrar contratos de componentes existentes.',
     ],
     tradeOffs: [
-      'Optei por interface mais objetiva em vez de excesso de personalização visual.',
-      'Alguns relatórios avançados ficaram para uma iteração posterior para preservar ritmo de entrega.',
+      'Menos personalização visual para preservar velocidade e previsibilidade de uso.',
+      'Postergar relatórios avançados para manter o ciclo de entrega estável.',
     ],
     outcome:
-      'A centralização dos fluxos críticos aumentou o controle operacional e reduziu ruído entre áreas. O produto passou a sustentar decisões com mais clareza e menos retrabalho.',
+      'O sistema elevou a previsibilidade operacional e reduziu ruído entre atendimento, caixa e acompanhamento financeiro.',
     learnings: [
-      'Produto operacional exige decisões de UX orientadas por tempo e contexto de uso real.',
-      'Padrão visual consistente acelera manutenção e reduz custo de evolução.',
-      'Escopo incremental bem priorizado aumenta qualidade sem travar entrega.',
+      'Produto operacional exige hierarquia de informação orientada por tempo de decisão.',
+      'Padrões de interface consistentes diminuem custo de manutenção.',
+      'Entrega incremental com prioridade clara mantém qualidade mesmo com escopo amplo.',
     ],
     gallery: [
       {
         src: '/projects/togo.jpeg',
-        alt: 'Tela principal do TOGO com visão operacional integrada',
-        caption: 'Visão geral do sistema com módulos conectados para operação diária.',
+        alt: 'Tela principal do TOGO com visão integrada de operação',
+        caption: 'Painel central com acesso rápido aos módulos essenciais da rotina.',
       },
     ],
-    caseHint: 'Abrir case completo',
+    caseHint: 'Ler case completo',
     featured: true,
     accent: 'blue',
+    seo: {
+      title: 'TOGO | Case de front-end para gestão operacional',
+      description:
+        'Case TOGO: produto web para gestão clínica e comercial com foco em fluxo operacional, clareza de decisão e evolução contínua.',
+      canonicalPath: '/projetos/togo',
+      ogImage: '/projects/togo.jpeg',
+    },
   },
   {
     slug: 'estaciona-ai',
     name: 'Estaciona Aí',
-    tagline: 'Busca e oferta de vagas com experiência orientada por localização.',
-    summary: 'Plataforma web para busca e oferta de vagas com autenticação, mapas, geolocalização e fluxo de pagamento.',
+    tagline: 'Descoberta e reserva de vagas com jornada guiada por localização.',
+    summary: 'Plataforma para quem busca e oferta vagas com autenticação, mapa interativo e pagamento integrado.',
     cover: '/projects/estacionaai.jpeg',
     demoUrl: 'https://estaciona-ai-hub.vercel.app/',
     stack: ['React', 'TypeScript', 'Mapas', 'Geolocalização', 'Fluxo de pagamento'],
     tags: ['React', 'Autenticação', 'Mapas', 'Geolocalização', 'Pagamentos'],
-    highlights: ['Onboarding e autenticação', 'Mapa interativo para descoberta de vagas', 'Pagamento integrado ao fluxo'],
+    highlights: ['Onboarding objetivo', 'Mapa como eixo principal', 'Reserva e pagamento em poucas etapas'],
     overview:
-      'O case foi desenvolvido para estruturar uma jornada de ponta a ponta entre quem busca vaga e quem oferta espaço. O foco foi reduzir atrito em descoberta, reserva e pagamento.',
+      'Case focado em reduzir atrito entre descoberta, comparação e reserva de vaga, mantendo confiança ao longo da jornada.',
     problem:
-      'Usuários tinham dificuldade para encontrar vagas confiáveis em tempo hábil, enquanto ofertantes não possuíam um caminho simples para disponibilizar e monetizar espaços.',
+      'Usuários perdiam tempo para encontrar vagas confiáveis, enquanto ofertantes tinham baixa visibilidade e processo pouco padronizado.',
     solution:
-      'Modelei uma experiência centrada em localização, com mapa como eixo principal do fluxo, combinando filtros, detalhes de vaga e confirmação da ação em poucas etapas.',
+      'Modelei o fluxo com mapa central, filtros diretos e confirmações claras, reduzindo ambiguidade e fricção na decisão.',
     role:
-      'Conduzi o desenvolvimento front-end da jornada principal, desde a estrutura de telas até os estados de interação e validação visual dos fluxos críticos.',
+      'Conduzi desenvolvimento front-end da jornada principal, com foco em estados de interação, feedback visual e consistência responsiva.',
     productDecisions: [
-      'Mapa como elemento principal da navegação para reduzir ambiguidade na busca.',
-      'Fluxo de cadastro e login enxuto para não interromper intenção de uso.',
-      'Priorização de sinais de confiança antes da confirmação de reserva.',
+      'Mapa como superfície principal para tornar busca e contexto espacial inseparáveis.',
+      'Cadastro enxuto para preservar intenção do usuário no primeiro acesso.',
+      'Sinais de confiança posicionados antes da confirmação da reserva.',
     ],
     technicalChallenges: [
-      'Sincronizar estados entre lista de vagas, mapa e detalhes da seleção.',
-      'Tratar cenários de localização e permissões com feedback claro para o usuário.',
-      'Manter responsividade preservando leitura espacial da interface.',
+      'Sincronizar estado de lista, mapa e detalhes sem perda de contexto.',
+      'Tratar permissões de localização com feedback claro em cada cenário.',
+      'Preservar legibilidade do mapa em diferentes tamanhos de tela.',
     ],
     tradeOffs: [
-      'Reduzi elementos informativos secundários para manter foco em localização e ação.',
-      'Preferi fluxo de pagamento direto em vez de opções extensas para simplificar decisão.',
+      'Redução de informações secundárias para priorizar ação de reserva.',
+      'Fluxo de pagamento inicial mais direto para acelerar adoção.',
     ],
     outcome:
-      'A experiência ficou mais previsível do início ao fim, com menos fricção na descoberta de vagas e maior clareza para quem oferta espaços.',
+      'A jornada ficou mais previsível e curta, melhorando clareza de decisão para quem procura e para quem oferece vagas.',
     learnings: [
-      'Produtos com contexto geográfico pedem feedback visual constante ao usuário.',
-      'Fluxos de decisão rápida exigem copy curta e hierarquia forte de informação.',
-      'Menos passos com boa confirmação tende a elevar confiança de uso.',
+      'Produtos geográficos exigem confirmação visual constante de contexto.',
+      'Decisões rápidas dependem de copy curta e hierarquia forte.',
+      'Menos passos com feedback claro aumenta confiança de uso.',
     ],
     gallery: [
       {
         src: '/projects/estacionaai.jpeg',
-        alt: 'Tela do Estaciona Aí com mapa e cards de vagas',
-        caption: 'Fluxo de descoberta de vagas orientado por mapa e localização.',
+        alt: 'Tela do Estaciona Aí com mapa e vagas disponíveis',
+        caption: 'Busca de vagas orientada por posição e disponibilidade em tempo real.',
       },
     ],
-    caseHint: 'Abrir case completo',
+    caseHint: 'Ler case completo',
     featured: false,
     accent: 'violet',
+    seo: {
+      title: 'Estaciona Aí | Case de UX com mapas e pagamento',
+      description:
+        'Case Estaciona Aí: plataforma web com geolocalização, reserva e pagamento para reduzir fricção na busca de vagas.',
+      canonicalPath: '/projetos/estaciona-ai',
+      ogImage: '/projects/estacionaai.jpeg',
+    },
   },
   {
     slug: 'clima-safe',
     name: 'Clima Safe',
-    tagline: 'Inteligência climática aplicada à navegação urbana em tempo real.',
-    summary: 'Aplicação web com mapa interativo, geolocalização, dados climáticos em tempo real e alertas acionáveis.',
+    tagline: 'Leitura climática aplicada a deslocamento urbano em tempo real.',
+    summary: 'Aplicação com mapa, alertas e dados climáticos para apoiar decisões rápidas de rota e segurança.',
     cover: '/projects/clima.jpeg',
     demoUrl: 'https://urban-heat-safe-zones.vercel.app/',
     stack: ['React', 'TypeScript', 'APIs climáticas', 'Mapas', 'Dados em tempo real'],
     tags: ['React', 'APIs climáticas', 'Mapas', 'UX de contexto', 'Tempo real'],
-    highlights: ['Leitura climática com foco em risco', 'Alertas acionáveis por localização', 'Navegação orientada por contexto urbano'],
+    highlights: ['Risco por localização', 'Alertas acionáveis', 'Camadas de leitura rápida'],
     overview:
-      'O produto foi criado para transformar dados climáticos em informação utilizável na rotina urbana. A interface prioriza leitura rápida de risco e apoio a decisões de deslocamento.',
+      'Produto concebido para transformar dados climáticos técnicos em sinais claros para decisões urbanas sob pressão de tempo.',
     problem:
-      'Sem informação geográfica contextualizada, pessoas e equipes não conseguiam antecipar riscos climáticos nem tomar decisões rápidas de deslocamento seguro.',
+      'Sem visão geográfica contextual, usuários não conseguiam antecipar risco e escolher rotas com segurança.',
     solution:
-      'Desenhei uma experiência baseada em mapa com camadas de clima e risco, combinando status visual direto, alertas e apoio à escolha de rotas mais seguras.',
+      'Estruturei um mapa com camadas de risco e alertas objetivos, priorizando entendimento imediato antes de detalhes avançados.',
     role:
-      'Atuei na concepção e implementação do front-end, organizando estrutura de dados exibidos em mapa, componentes de alerta e hierarquia de leitura para diferentes cenários.',
+      'Atuei na concepção e implementação front-end, organizando estados de dados, componentes de alerta e hierarquia de leitura.',
     productDecisions: [
-      'Destaque para status de risco com linguagem visual simples e direta.',
-      'Mapa com camadas acionáveis para manter controle de contexto pelo usuário.',
-      'Resumo imediato de condições locais antes de detalhes complementares.',
+      'Status de risco como informação principal acima de métricas secundárias.',
+      'Camadas acionáveis para manter autonomia do usuário no mapa.',
+      'Resumo local imediato para suportar decisão em poucos segundos.',
     ],
     technicalChallenges: [
-      'Orquestrar atualização de dados sem comprometer fluidez da interface.',
-      'Tornar informações climáticas técnicas compreensíveis em poucos segundos.',
-      'Manter consistência entre estados de carregamento, erro e dados parciais.',
+      'Atualizar múltiplas fontes de dados sem comprometer fluidez da interface.',
+      'Traduzir termos climáticos para linguagem operacional de uso diário.',
+      'Manter consistência entre estados de carregamento, parcial e erro.',
     ],
     tradeOffs: [
-      'Priorização da leitura de risco em vez de visualizações climáticas avançadas.',
-      'Conjunto inicial de camadas mais enxuto para preservar clareza e performance.',
+      'Priorização de leitura de risco em vez de visualizações analíticas avançadas.',
+      'Escopo inicial de camadas mais enxuto para garantir clareza e performance.',
     ],
     outcome:
-      'A aplicação passou a oferecer leitura contextual de risco por região, com alertas que apoiam decisões imediatas de deslocamento mais seguro.',
+      'A aplicação passou a oferecer suporte direto para deslocamento urbano com menor incerteza e resposta mais rápida.',
     learnings: [
-      'Em produtos de contexto crítico, clareza da informação vale mais que volume de dados.',
-      'Bom design de estados reduz ansiedade em cenários de incerteza.',
-      'Estrutura modular facilita evolução de fontes e regras de alerta.',
+      'Em cenários críticos, clareza de sinal importa mais que volume de dado.',
+      'Estados bem projetados reduzem ansiedade em situações de incerteza.',
+      'Arquitetura modular facilita expansão de regras de alerta.',
     ],
     gallery: [
       {
         src: '/projects/clima.jpeg',
-        alt: 'Tela do Clima Safe com mapa e informações de risco climático',
-        caption: 'Leitura de risco climático em mapa para suporte a deslocamento urbano.',
+        alt: 'Tela do Clima Safe com mapa e indicadores de risco',
+        caption: 'Camadas climáticas com foco em tomada de decisão rápida.',
       },
     ],
-    caseHint: 'Abrir case completo',
+    caseHint: 'Ler case completo',
     featured: false,
     accent: 'emerald',
+    seo: {
+      title: 'Clima Safe | Case de produto com dados em tempo real',
+      description:
+        'Case Clima Safe: aplicação web para leitura de risco climático por localização com alertas e suporte à decisão de rota.',
+      canonicalPath: '/projetos/clima-safe',
+      ogImage: '/projects/clima.jpeg',
+    },
   },
 ];
 

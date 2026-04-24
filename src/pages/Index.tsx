@@ -22,26 +22,34 @@ export default function Index() {
         canonical="/"
         image={site.seo.ogImage}
         type="website"
-        jsonLd={[
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: site.name,
-            jobTitle: site.role,
-            url: homeUrl,
-            image: `${site.baseUrl}${site.seo.ogImage}`,
-            email: site.contactInfo.email,
-            sameAs: [site.contactInfo.githubUrl, site.contactInfo.linkedinUrl],
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: site.seo.siteName,
-            url: homeUrl,
-            inLanguage: site.locale,
-            description: site.seo.homeDescription,
-          },
-        ]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Person',
+              name: site.name,
+              jobTitle: site.role,
+              url: homeUrl,
+              image: `${site.baseUrl}${site.seo.ogImage}`,
+              email: site.contactInfo.email,
+              sameAs: [site.contactInfo.githubUrl, site.contactInfo.linkedinUrl],
+            },
+            {
+              '@type': 'WebSite',
+              name: site.seo.siteName,
+              url: homeUrl,
+              inLanguage: site.locale,
+              description: site.seo.homeDescription,
+            },
+            {
+              '@type': 'ProfessionalService',
+              name: site.seo.siteName,
+              url: homeUrl,
+              description: site.tagline,
+              areaServed: 'Brasil',
+            },
+          ],
+        }}
       />
       <Navbar />
       <Hero />
