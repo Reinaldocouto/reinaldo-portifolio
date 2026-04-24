@@ -33,8 +33,8 @@ type ContactChannel = {
 export const site = {
   name: 'Reinaldo Couto',
   brand: 'reinaldo.',
-  role: 'Desenvolvedor front-end para produto digital',
-  tagline: 'Transformo requisitos complexos em interfaces que vendem, escalam e sustentam operação.',
+  role: 'Desenvolvedor full stack com foco crescente em back-end e integrações',
+  tagline: 'Construo sistemas web com visão de produto, APIs e automações orientadas à operação real.',
   locale: 'pt-BR',
   baseUrl: 'https://reinaldo-portifolio.vercel.app',
   availability: 'Disponível para novos projetos',
@@ -47,12 +47,12 @@ export const site = {
     resumeUrl: '/reinaldo_couto_cv.pdf',
   },
   hero: {
-    eyebrow: 'Front-end orientado a resultado de produto.',
+    eyebrow: 'Sistemas web, APIs e automação com contexto de produto e operação.',
     headlineTop: 'Reinaldo',
     headlineAccent: 'Couto',
-    headlineBottom: 'Construo interfaces para decisões críticas, operação diária e crescimento de produto.',
+    headlineBottom: 'Desenvolvimento de sistemas, integrações e fluxos back-end para decisões mais rápidas e consistentes.',
     description:
-      'Atuo no ponto em que negócio, UX e implementação precisam convergir com rapidez e qualidade técnica.',
+      'Tenho base forte em front-end orientado a produto e avanço a atuação em back-end, integração entre serviços e automação de processos com bots/agentes de IA aplicados a casos reais.',
     primaryCta: {
       label: 'Ver cases',
       href: '#projetos',
@@ -68,11 +68,11 @@ export const site = {
     ],
     profileCard: {
       terminalLabel: '~/reinaldo --profile',
-      role: 'Front-end engineer',
-      focus: ['produto', 'conversão', 'escala'],
-      stack: ['React', 'TypeScript', 'Supabase'],
-      building: 'experiências que reduzem atrito e aumentam previsibilidade',
-      tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Mapbox', 'Postgres'],
+      role: 'Full stack developer (backend-oriented)',
+      focus: ['back-end', 'integrações', 'automação'],
+      stack: ['C#/.NET (foco atual)', 'Java', 'React + TypeScript'],
+      building: 'sistemas web com APIs, fluxo claro e evolução técnica consistente',
+      tags: ['C#', '.NET', 'Java', 'APIs REST', 'SQL', 'React'],
     },
   },
   navigation: [
@@ -84,67 +84,73 @@ export const site = {
   ] satisfies NavItem[],
   highlights: [
     {
-      title: 'Produto em produção',
-      description: 'Cases publicados com fluxo completo, critério de decisão e contexto real de uso.',
+      title: 'Sistemas com fluxo real',
+      description: 'Cases pensados para rotina operacional, conectando regras de negócio, dados e execução técnica.',
     },
     {
-      title: 'Foco em impacto',
-      description: 'Priorização por resultado: o que acelera operação, reduz erro e melhora leitura do usuário.',
+      title: 'Integrações úteis',
+      description: 'Uso de APIs e serviços externos para reduzir retrabalho, consolidar informação e acelerar decisões.',
     },
     {
-      title: 'Execução confiável',
-      description: 'Arquitetura de componentes e padrões que sustentam evolução sem perda de consistência.',
+      title: 'Automação com responsabilidade',
+      description: 'Interesse ativo em bots/agentes de IA para processos práticos, sem promessas irreais de maturidade.',
     },
     {
-      title: 'Ritmo de entrega',
-      description: 'Comunicação direta, alinhamento curto e ciclos contínuos de melhoria.',
+      title: 'Base front-end como suporte',
+      description: 'Experiência em interface e produto aplicada para entregar sistemas completos com consistência ponta a ponta.',
     },
   ] satisfies HighlightItem[],
   about: [
     {
-      title: 'Como eu enquadro o problema',
-      body: 'Começo pela decisão que a interface precisa habilitar. A partir disso, organizo fluxo, estados críticos e informação essencial para evitar ruído e reduzir retrabalho.',
+      title: 'Como eu enquadro problemas de sistema',
+      body: 'Começo pela operação: quais regras governam o processo, onde há gargalo e que decisão precisa acontecer com segurança. A partir disso, organizo fluxo, dados e integração para sustentar evolução contínua.',
     },
     {
-      title: 'Como eu conduzo o trabalho',
-      body: 'Transformo escopo em entregas incrementais com critérios claros de qualidade. Isso mantém previsibilidade para o time e acelera validação com usuários.',
+      title: 'Como transformo escopo em entrega',
+      body: 'Traduzo necessidades de produto e negócio em incrementos técnicos claros, combinando front-end, consumo de APIs e estrutura de back-end em construção ativa, com foco profissional em C#/.NET e base relevante em Java.',
     },
   ] satisfies AboutBlock[],
   stackGroups: [
     {
-      title: 'Construção de interface',
-      items: ['React', 'TypeScript', 'Tailwind CSS', 'Arquitetura de componentes', 'Acessibilidade e responsividade'],
+      title: 'Back-end e integração de APIs',
+      items: ['APIs REST', 'Integração entre sistemas', 'Autenticação e autorização', 'Modelagem de regras de negócio', 'Banco de dados SQL'],
     },
     {
-      title: 'Integração de produto',
-      items: ['APIs REST', 'Autenticação', 'Modelagem de estado', 'Mapas e geolocalização', 'Sincronização de dados'],
+      title: 'Automação e IA aplicada (foco atual)',
+      items: [
+        'Automação de processos operacionais',
+        'Bots/agentes de IA para tarefas repetitivas',
+        'Orquestração de serviços',
+        'Padronização de fluxos e respostas',
+        'Observabilidade e consistência de execução',
+      ],
     },
     {
-      title: 'Entrega e governança',
-      items: ['Priorização por impacto', 'Documentação objetiva', 'Refinamento orientado por uso', 'Padronização visual', 'Evolução incremental'],
+      title: 'Linguagens e entrega full stack',
+      items: ['C# e .NET/ASP.NET Core (direção principal)', 'Java (conhecimento relevante)', 'React e TypeScript como apoio', 'Arquitetura modular', 'Versionamento e evolução incremental'],
     },
   ] satisfies StackGroup[],
   experience: [
     {
-      title: 'Construção de produtos para rotinas críticas',
+      title: 'Sistemas para operação corporativa e rotina crítica',
       period: 'Fase atual',
-      summary: 'Desenvolvimento de interfaces para cenários com alta dependência operacional, priorizando clareza, velocidade de uso e estabilidade de fluxo.',
+      summary: 'Atuação em soluções web voltadas a processos reais, conectando fluxo operacional, regras de negócio e clareza de uso para reduzir erro e retrabalho.',
     },
     {
-      title: 'Evolução por cases autorais completos',
+      title: 'Evolução contínua em integração e estrutura técnica',
       period: 'Ciclo contínuo',
-      summary: 'Concepção e publicação de projetos end-to-end para aprofundar decisões de produto, arquitetura front-end e maturidade de entrega.',
+      summary: 'Desenvolvimento de cases end-to-end com foco em arquitetura de solução, consumo de APIs e organização de dados, reforçando transição para atuação back-end/full stack.',
     },
     {
-      title: 'Base profissional em ambiente de pressão',
+      title: 'Base profissional em ambiente de alta responsabilidade',
       period: 'Fundação',
-      summary: 'Experiência em contexto exigente, reforçando responsabilidade, senso de prioridade e consistência na execução.',
+      summary: 'Experiência em contexto exigente de manutenção e evolução de software, fortalecendo disciplina de entrega, leitura de processo e capacidade de atuar sob pressão.',
     },
   ] satisfies ExperienceItem[],
   contact: {
-    title: 'Se o seu produto precisa de mais clareza para vender e operar, vamos conversar.',
+    title: 'Se você precisa evoluir sistemas, integrações ou automações com clareza técnica, vamos conversar.',
     description:
-      'Me conte o cenário, os gargalos e o objetivo de negócio. Eu retorno com visão prática de caminho, riscos e oportunidades de implementação.',
+      'Estou aberto a oportunidades em back-end júnior/pleno inicial, full stack com viés técnico, projetos com C#/.NET, Java, APIs, bots/agentes e melhoria de operação.',
     channels: [
       { label: 'E-mail', value: 'reinaldocouto10@gmail.com', href: 'mailto:reinaldocouto10@gmail.com' },
       { label: 'WhatsApp', value: '(11) 99538-4270', href: 'https://wa.me/5511995384270' },
@@ -154,16 +160,16 @@ export const site = {
     ] satisfies ContactChannel[],
   },
   footer: {
-    note: 'Portfólio com foco em resultado de produto, clareza de interface e execução técnica consistente.',
+    note: 'Portfólio com foco em sistemas web, integração de APIs e automação prática, mantendo base sólida em front-end.',
   },
   seo: {
     siteName: 'Portfólio de Reinaldo Couto',
-    defaultTitle: 'Reinaldo Couto — Front-end para produto digital',
+    defaultTitle: 'Reinaldo Couto — Full stack com foco em back-end, APIs e automação',
     defaultDescription:
-      'Portfólio de Reinaldo Couto com cases de produto digital em React, foco em clareza de interface e impacto operacional.',
-    homeTitle: 'Reinaldo Couto | Front-end para produto digital e operação',
+      'Portfólio de Reinaldo Couto com projetos de sistemas web, integração de APIs e automação. Base forte em front-end e direção profissional em C#/.NET e Java.',
+    homeTitle: 'Reinaldo Couto | Sistemas web, back-end, integrações e automação',
     homeDescription:
-      'Desenvolvedor front-end com foco em produto digital, conversão e confiabilidade operacional. Conheça cases com decisões, trade-offs e resultados.',
+      'Desenvolvedor com visão de produto e operação, construindo soluções web com foco crescente em back-end, APIs, automação e uso aplicado de bots/agentes de IA.',
     ogImage: '/projects/togo.jpeg',
     twitterHandle: '@reinaldocouto',
   },
