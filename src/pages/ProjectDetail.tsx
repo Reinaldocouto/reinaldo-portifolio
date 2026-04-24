@@ -151,7 +151,7 @@ export default function ProjectDetail() {
 
           <section className="grid gap-4 md:grid-cols-3">
             <article className="rounded-2xl border border-border/38 bg-panel/20 p-5 md:p-6">
-              <h2 className="text-lg font-semibold">Decisões de produto/UX</h2>
+              <h2 className="text-lg font-semibold">Decisões de produto e arquitetura de fluxo</h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
                 {project.productDecisions.map((item) => (
                   <li key={item}>{item}</li>

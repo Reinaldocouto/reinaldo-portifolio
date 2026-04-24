@@ -44,39 +44,39 @@ export const projects: Project[] = [
     name: 'TOGO',
     tagline: 'Gestão clínica e comercial em um fluxo único de operação.',
     summary:
-      'Plataforma web com agenda, prontuário, estoque, PDV, financeiro e indicadores para leitura rápida da rotina.',
+      'Sistema web para operação clínica/comercial com agenda, prontuário, estoque, PDV e financeiro integrados em um fluxo único.',
     cover: '/projects/togo.jpeg',
     demoUrl: 'https://togo-petcare-pro.vercel.app/',
-    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Arquitetura modular', 'Form handling'],
-    tags: ['React', 'TypeScript', 'Dashboard', 'Operação', 'PDV', 'Financeiro'],
-    highlights: ['Agenda + prontuário no mesmo fluxo', 'Estoque, PDV e financeiro conectados', 'Painel de acompanhamento diário'],
+    stack: ['React', 'TypeScript', 'APIs REST', 'Arquitetura modular', 'Modelagem de fluxo operacional'],
+    tags: ['Sistema web', 'Integração de módulos', 'Operação', 'PDV', 'Financeiro', 'APIs'],
+    highlights: ['Fluxo operacional ponta a ponta', 'Módulos conectados por regra de negócio', 'Leitura rápida para decisão diária'],
     overview:
       'Projeto criado para substituir uma operação fragmentada por um sistema único, com foco em continuidade de trabalho e redução de perda de contexto.',
     problem:
       'A equipe alternava entre planilhas e ferramentas isoladas, gerando retrabalho, baixa rastreabilidade e atraso na tomada de decisão.',
     solution:
-      'Estruturei a experiência por tarefas operacionais, centralizando ações críticas em poucos cliques e com leitura imediata de status.',
+      'Estruturei a solução por fluxo operacional, conectando módulos por regras de negócio e priorizando ações críticas com status rastreável.',
     role:
-      'Responsável pelo front-end de ponta a ponta: desenho de fluxo, arquitetura de componentes, implementação e refinamento contínuo após validação.',
+      'Responsável pela arquitetura da solução no front-end e pela modelagem de fluxo entre módulos, com integração de dados e refinamento contínuo após validação.',
     productDecisions: [
       'Priorizar módulos de maior impacto diário antes de funcionalidades secundárias.',
       'Navegação orientada pela rotina da equipe, não pela estrutura interna do sistema.',
       'Dashboard inicial com indicadores acionáveis para reduzir tempo de interpretação.',
     ],
     technicalChallenges: [
-      'Garantir consistência entre módulos com regras e densidades diferentes.',
-      'Sustentar performance em telas com alto volume de dados operacionais.',
-      'Evoluir funcionalidades sem quebrar contratos de componentes existentes.',
+      'Garantir consistência de dados e comportamento entre módulos com regras distintas.',
+      'Sustentar performance em telas com alto volume de dados e múltiplos estados de integração.',
+      'Evoluir funcionalidades sem quebrar contratos de fluxo e componentes existentes.',
     ],
     tradeOffs: [
       'Menos personalização visual para preservar velocidade e previsibilidade de uso.',
       'Postergar relatórios avançados para manter o ciclo de entrega estável.',
     ],
     outcome:
-      'O sistema elevou a previsibilidade operacional e reduziu ruído entre atendimento, caixa e acompanhamento financeiro.',
+      'O sistema aumentou a previsibilidade operacional e reduziu ruído entre atendimento, caixa, estoque e acompanhamento financeiro.',
     learnings: [
-      'Produto operacional exige hierarquia de informação orientada por tempo de decisão.',
-      'Padrões de interface consistentes diminuem custo de manutenção.',
+      'Produto operacional exige modelagem de fluxo orientada por tempo de decisão.',
+      'Integração consistente entre módulos reduz custo de manutenção e retrabalho.',
       'Entrega incremental com prioridade clara mantém qualidade mesmo com escopo amplo.',
     ],
     gallery: [
@@ -90,9 +90,9 @@ export const projects: Project[] = [
     featured: true,
     accent: 'blue',
     seo: {
-      title: 'TOGO | Case de front-end para gestão operacional',
+      title: 'TOGO | Case de sistema web para operação e integração de fluxo',
       description:
-        'Case TOGO: produto web para gestão clínica e comercial com foco em fluxo operacional, clareza de decisão e evolução contínua.',
+        'Case TOGO: sistema web para gestão clínica e comercial com foco em fluxo operacional, integração entre módulos e clareza de decisão.',
       canonicalPath: '/projetos/togo',
       ogImage: '/projects/togo.jpeg',
     },
@@ -101,12 +101,12 @@ export const projects: Project[] = [
     slug: 'estaciona-ai',
     name: 'Estaciona Aí',
     tagline: 'Descoberta e reserva de vagas com jornada guiada por localização.',
-    summary: 'Plataforma para quem busca e oferta vagas com autenticação, mapa interativo e pagamento integrado.',
+    summary: 'Plataforma para descoberta e oferta de vagas com autenticação, integração de mapas e fluxo de reserva/pagamento.',
     cover: '/projects/estacionaai.jpeg',
     demoUrl: 'https://estaciona-ai-hub.vercel.app/',
-    stack: ['React', 'TypeScript', 'Mapas', 'Geolocalização', 'Fluxo de pagamento'],
-    tags: ['React', 'Autenticação', 'Mapas', 'Geolocalização', 'Pagamentos'],
-    highlights: ['Onboarding objetivo', 'Mapa como eixo principal', 'Reserva e pagamento em poucas etapas'],
+    stack: ['React', 'TypeScript', 'APIs de mapa', 'Autenticação', 'Fluxo de pagamento'],
+    tags: ['Sistema web', 'APIs', 'Autenticação', 'Mapas', 'Pagamentos'],
+    highlights: ['Integração entre mapa, busca e detalhes', 'Autenticação e reserva com fluxo guiado', 'Pagamento integrado com menos atrito'],
     overview:
       'Case focado em reduzir atrito entre descoberta, comparação e reserva de vaga, mantendo confiança ao longo da jornada.',
     problem:
@@ -114,15 +114,15 @@ export const projects: Project[] = [
     solution:
       'Modelei o fluxo com mapa central, filtros diretos e confirmações claras, reduzindo ambiguidade e fricção na decisão.',
     role:
-      'Conduzi desenvolvimento front-end da jornada principal, com foco em estados de interação, feedback visual e consistência responsiva.',
+      'Conduzi o desenvolvimento da jornada principal, estruturando estados de interface e integração de serviços para manter contexto entre busca, reserva e pagamento.',
     productDecisions: [
       'Mapa como superfície principal para tornar busca e contexto espacial inseparáveis.',
       'Cadastro enxuto para preservar intenção do usuário no primeiro acesso.',
       'Sinais de confiança posicionados antes da confirmação da reserva.',
     ],
     technicalChallenges: [
-      'Sincronizar estado de lista, mapa e detalhes sem perda de contexto.',
-      'Tratar permissões de localização com feedback claro em cada cenário.',
+      'Sincronizar lista, mapa e detalhes sem perda de contexto entre chamadas de serviço.',
+      'Tratar permissões de localização e fallback de API com feedback claro em cada cenário.',
       'Preservar legibilidade do mapa em diferentes tamanhos de tela.',
     ],
     tradeOffs: [
@@ -130,9 +130,9 @@ export const projects: Project[] = [
       'Fluxo de pagamento inicial mais direto para acelerar adoção.',
     ],
     outcome:
-      'A jornada ficou mais previsível e curta, melhorando clareza de decisão para quem procura e para quem oferece vagas.',
+      'A jornada ficou mais previsível e curta, melhorando clareza de decisão e consistência do fluxo entre descoberta, reserva e pagamento.',
     learnings: [
-      'Produtos geográficos exigem confirmação visual constante de contexto.',
+      'Produtos geográficos exigem integração estável entre contexto visual e dados de localização.',
       'Decisões rápidas dependem de copy curta e hierarquia forte.',
       'Menos passos com feedback claro aumenta confiança de uso.',
     ],
@@ -147,9 +147,9 @@ export const projects: Project[] = [
     featured: false,
     accent: 'violet',
     seo: {
-      title: 'Estaciona Aí | Case de UX com mapas e pagamento',
+      title: 'Estaciona Aí | Case de integração com mapas, autenticação e pagamento',
       description:
-        'Case Estaciona Aí: plataforma web com geolocalização, reserva e pagamento para reduzir fricção na busca de vagas.',
+        'Case Estaciona Aí: plataforma web com APIs de localização, autenticação, reserva e pagamento para reduzir fricção na busca de vagas.',
       canonicalPath: '/projetos/estaciona-ai',
       ogImage: '/projects/estacionaai.jpeg',
     },
@@ -158,27 +158,27 @@ export const projects: Project[] = [
     slug: 'clima-safe',
     name: 'Clima Safe',
     tagline: 'Leitura climática aplicada a deslocamento urbano em tempo real.',
-    summary: 'Aplicação com mapa, alertas e dados climáticos para apoiar decisões rápidas de rota e segurança.',
+    summary: 'Aplicação com mapa, alertas e integração de dados climáticos para apoiar decisões rápidas de rota e segurança.',
     cover: '/projects/clima.jpeg',
     demoUrl: 'https://urban-heat-safe-zones.vercel.app/',
     stack: ['React', 'TypeScript', 'APIs climáticas', 'Mapas', 'Dados em tempo real'],
-    tags: ['React', 'APIs climáticas', 'Mapas', 'UX de contexto', 'Tempo real'],
-    highlights: ['Risco por localização', 'Alertas acionáveis', 'Camadas de leitura rápida'],
+    tags: ['Sistema web', 'APIs climáticas', 'Mapas', 'Dados em tempo real', 'Regras de alerta'],
+    highlights: ['Orquestração de fontes climáticas', 'Regras de alerta por localização', 'Camadas para decisão rápida'],
     overview:
       'Produto concebido para transformar dados climáticos técnicos em sinais claros para decisões urbanas sob pressão de tempo.',
     problem:
       'Sem visão geográfica contextual, usuários não conseguiam antecipar risco e escolher rotas com segurança.',
     solution:
-      'Estruturei um mapa com camadas de risco e alertas objetivos, priorizando entendimento imediato antes de detalhes avançados.',
+      'Modelei um fluxo de dados com camadas de risco e alertas objetivos, priorizando entendimento imediato antes de detalhes avançados.',
     role:
-      'Atuei na concepção e implementação front-end, organizando estados de dados, componentes de alerta e hierarquia de leitura.',
+      'Atuei na concepção e implementação da aplicação, organizando estados de dados, integração de APIs climáticas e componentes de alerta com leitura progressiva.',
     productDecisions: [
       'Status de risco como informação principal acima de métricas secundárias.',
       'Camadas acionáveis para manter autonomia do usuário no mapa.',
       'Resumo local imediato para suportar decisão em poucos segundos.',
     ],
     technicalChallenges: [
-      'Atualizar múltiplas fontes de dados sem comprometer fluidez da interface.',
+      'Orquestrar múltiplas fontes de dados climáticos sem comprometer fluidez da interface.',
       'Traduzir termos climáticos para linguagem operacional de uso diário.',
       'Manter consistência entre estados de carregamento, parcial e erro.',
     ],
@@ -187,11 +187,11 @@ export const projects: Project[] = [
       'Escopo inicial de camadas mais enxuto para garantir clareza e performance.',
     ],
     outcome:
-      'A aplicação passou a oferecer suporte direto para deslocamento urbano com menor incerteza e resposta mais rápida.',
+      'A aplicação passou a oferecer suporte direto para deslocamento urbano com menor incerteza, usando dados integrados e regras de alerta mais claras.',
     learnings: [
       'Em cenários críticos, clareza de sinal importa mais que volume de dado.',
       'Estados bem projetados reduzem ansiedade em situações de incerteza.',
-      'Arquitetura modular facilita expansão de regras de alerta.',
+      'Arquitetura modular facilita expansão de regras de alerta e novas integrações de serviço.',
     ],
     gallery: [
       {
@@ -204,9 +204,9 @@ export const projects: Project[] = [
     featured: false,
     accent: 'emerald',
     seo: {
-      title: 'Clima Safe | Case de produto com dados em tempo real',
+      title: 'Clima Safe | Case de integração de APIs climáticas em tempo real',
       description:
-        'Case Clima Safe: aplicação web para leitura de risco climático por localização com alertas e suporte à decisão de rota.',
+        'Case Clima Safe: aplicação web com integração de APIs climáticas para leitura de risco por localização e suporte à decisão de rota.',
       canonicalPath: '/projetos/clima-safe',
       ogImage: '/projects/clima.jpeg',
     },

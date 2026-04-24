@@ -6,7 +6,7 @@ export function Experience() {
       <div className="container-tight space-y-8">
         <header className="max-w-4xl space-y-3">
           <p className="text-xs uppercase tracking-[0.24em] text-muted">Experiência</p>
-          <h2 className="text-3xl font-semibold md:text-4xl">Bagagem que combina visão de produto, disciplina de execução e confiança de entrega.</h2>
+          <h2 className="text-3xl font-semibold md:text-4xl">Experiência aplicada a sistemas reais, evolução contínua e foco crescente em back-end.</h2>
         </header>
 
         <div className="relative space-y-3 before:absolute before:bottom-4 before:left-[9px] before:top-4 before:w-px before:bg-border/55">
