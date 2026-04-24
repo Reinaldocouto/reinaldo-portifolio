@@ -66,8 +66,12 @@ export const site = {
       { label: 'WhatsApp', href: 'https://wa.me/5511995384270' },
     ],
     profileCard: {
-      title: 'Resumo profissional',
-      lines: ['Foco em sistemas web de operação', 'Da estratégia de produto à entrega em produção', 'Execução técnica com padrão visual consistente'],
+      terminalLabel: '~/reinaldo --profile',
+      role: 'Desenvolvedor de produto',
+      focus: ['web', 'produto', 'operação'],
+      stack: ['React', 'TS', 'Supabase'],
+      building: 'sistemas úteis em contexto real',
+      tags: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Mapbox', 'Postgres'],
     },
   },
   navigation: [
