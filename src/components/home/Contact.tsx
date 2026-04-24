@@ -16,6 +16,8 @@ export function Contact() {
               <a
                 key={channel.label}
                 href={channel.href}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-xl border border-border bg-bg/55 px-4 py-3 transition hover:border-primary/60 hover:bg-bg"
               >
                 <p className="text-xs uppercase tracking-[0.16em] text-muted">{channel.label}</p>

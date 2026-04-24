@@ -6,7 +6,7 @@ export function Stack() {
       <div className="container-tight space-y-8">
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-[0.24em] text-muted">Stack</p>
-          <h2 className="text-3xl font-semibold md:text-4xl">Tecnologias e processo com foco em clareza e entrega.</h2>
+          <h2 className="text-3xl font-semibold md:text-4xl">Tecnologia, integração e processo para entrega com padrão profissional.</h2>
         </header>
 
         <div className="grid gap-5 md:grid-cols-3">

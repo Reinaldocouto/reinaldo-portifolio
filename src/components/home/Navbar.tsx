@@ -7,7 +7,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 16);
+    const onScroll = () => setIsScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
@@ -19,14 +19,14 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8">
       <div
         className={`mx-auto flex w-full max-w-6xl items-center justify-between rounded-2xl border px-4 py-3 transition-all md:px-6 ${
-          isScrolled ? 'border-border bg-panel/85 shadow-glow backdrop-blur-xl' : 'border-transparent bg-transparent'
+          isScrolled ? 'border-border bg-panel/80 shadow-glow backdrop-blur-xl' : 'border-border/25 bg-panel/35 backdrop-blur-md'
         }`}
       >
-        <a href="#top" className="text-sm font-semibold tracking-wide text-text md:text-base">
-          {site.name}
+        <a href="#top" className="text-base font-semibold tracking-wide text-text">
+          {site.brand}
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {site.navigation.map((item) => (
             <a key={item.label} href={item.href} className="text-sm text-muted transition-colors hover:text-text">
               {item.label}
@@ -34,15 +34,14 @@ export function Navbar() {
           ))}
         </nav>
 
-        <a href="#contato" className="hidden rounded-lg border border-border bg-panel px-4 py-2 text-sm font-medium md:inline-flex">
+        <a
+          href="#contato"
+          className="hidden rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-bg transition hover:bg-primary/90 md:inline-flex"
+        >
           Falar comigo
         </a>
 
-        <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex rounded-lg border border-border p-2 md:hidden"
-          aria-label="Abrir menu"
-        >
+        <button onClick={() => setIsOpen((prev) => !prev)} className="inline-flex rounded-lg border border-border p-2 md:hidden" aria-label="Abrir menu">
           {isOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
@@ -60,7 +59,7 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a href="#contato" className="mt-2 rounded-md border border-border px-3 py-2 text-center text-sm font-medium" onClick={closeMenu}>
+            <a href="#contato" className="mt-2 rounded-md bg-primary px-3 py-2 text-center text-sm font-semibold text-bg" onClick={closeMenu}>
               Falar comigo
             </a>
           </nav>
