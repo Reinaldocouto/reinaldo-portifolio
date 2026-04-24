@@ -10,7 +10,7 @@ const socialIconMap = {
 
 export function Hero() {
   return (
-    <section id="top" className="section-padding hero-section relative overflow-hidden pb-12 pt-28 md:pb-16 md:pt-36">
+    <section id="top" className="section-padding hero-section relative overflow-hidden pb-14 pt-32 md:pb-26 md:pt-48">
       <div className="hero-grid pointer-events-none absolute inset-0 z-0" />
       <div className="hero-glow animate-glow-pulse pointer-events-none absolute -top-48 left-1/2 z-10 h-[500px] w-[900px] -translate-x-1/2 blur-[120px]" />
       <div className="hero-glow-secondary animate-glow-pulse-soft pointer-events-none absolute -top-36 left-1/2 z-10 h-[380px] w-[680px] -translate-x-1/2 blur-[90px]" />
