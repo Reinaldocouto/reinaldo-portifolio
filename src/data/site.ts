@@ -160,7 +160,7 @@ export const site = {
     ] satisfies ContactChannel[],
   },
   footer: {
-    note: 'Portfólio com foco em sistemas web, integração de APIs e automação prática, mantendo base sólida em front-end.',
+    note: 'Portfólio com foco em sistemas web, integração de APIs e automação prática.',
   },
   seo: {
     siteName: 'Portfólio de Reinaldo Couto',
