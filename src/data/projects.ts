@@ -29,6 +29,15 @@ export type Project = {
   productDecisions: string[];
   technicalChallenges: string[];
   tradeOffs: string[];
+  technicalDeepDives?: Array<{
+    title: string;
+    problem: string;
+    solution: string;
+    impact: string;
+  }>;
+  automationFeatures?: string[];
+  securityNotes?: string[];
+  operationalImpacts?: string[];
   outcome: string;
   learnings: string[];
   gallery: ProjectGalleryItem[];
@@ -42,42 +51,91 @@ export const projects: Project[] = [
   {
     slug: 'togo',
     name: 'TOGO',
-    tagline: 'Gestão clínica e comercial em um fluxo único de operação.',
+    tagline: 'Plataforma operacional veterinária com fluxo clínico, comercial e financeiro integrado.',
     summary:
-      'Sistema web para operação clínica/comercial com agenda, prontuário, estoque, PDV e financeiro integrados em um fluxo único.',
+      'Sistema de gestão veterinária que conecta agenda, prontuário, vacinas, estoque, PDV e financeiro para reduzir atrito operacional e manter continuidade ponta a ponta.',
     cover: '/projects/togo.jpeg',
     demoUrl: 'https://togo-petcare-pro.vercel.app/',
-    stack: ['React', 'TypeScript', 'APIs REST', 'Arquitetura modular', 'Modelagem de fluxo operacional'],
-    tags: ['Sistema web', 'Integração de módulos', 'Operação', 'PDV', 'Financeiro', 'APIs'],
-    highlights: ['Fluxo operacional ponta a ponta', 'Módulos conectados por regra de negócio', 'Leitura rápida para decisão diária'],
+    stack: ['React', 'TypeScript', 'shadcn/ui + Tailwind', 'Supabase', 'PostgreSQL', 'APIs REST', 'RLS'],
+    tags: ['Sistema web', 'Gestão veterinária', 'Integração de módulos', 'Prontuário', 'OCR', 'Automação', 'Multi-tenant'],
+    highlights: [
+      'Fluxo clínico, comercial e financeiro no mesmo sistema',
+      'OCR para carteirinhas de vacinação com revisão antes do registro',
+      'Ditado clínico com padronização de linguagem para prontuário',
+      'Dashboard operacional para rotina diária e tomada de decisão',
+      'Segurança com autenticação, RLS e segregação por clínica',
+    ],
     overview:
-      'Projeto criado para substituir uma operação fragmentada por um sistema único, com foco em continuidade de trabalho e redução de perda de contexto.',
+      'O TOGO foi desenhado para centralizar uma rotina antes fragmentada em ferramentas separadas. A clínica consegue operar atendimento, vacinação, venda e gestão no mesmo ambiente, com menos troca de contexto, continuidade de processo e maior previsibilidade diária.',
     problem:
-      'A equipe alternava entre planilhas e ferramentas isoladas, gerando retrabalho, baixa rastreabilidade e atraso na tomada de decisão.',
+      'Antes do sistema, havia perda de contexto entre atendimento e financeiro, retrabalho em cadastros e baixa padronização de registros clínicos. A operação gastava tempo excessivo com tarefas burocráticas e tinha rastreabilidade limitada para decisões de agenda, estoque e faturamento.',
     solution:
-      'Estruturei a solução por fluxo operacional, conectando módulos por regras de negócio e priorizando ações críticas com status rastreável.',
+      'A solução foi modelada por fluxo operacional, não apenas por telas: agenda, prontuário, vacinas, estoque, PDV e financeiro compartilham dados e regras para manter continuidade. O objetivo foi reduzir fricção entre etapas clínicas e comerciais, com ações críticas rastreáveis do início ao fechamento.',
     role:
-      'Responsável pela arquitetura da solução no front-end e pela modelagem de fluxo entre módulos, com integração de dados e refinamento contínuo após validação.',
+      'Atuei na estruturação do front-end em React/TypeScript, no desenho dos fluxos entre módulos e na integração com dados/serviços via Supabase (Auth, PostgreSQL, Storage e APIs). Também modelei a experiência para rotina clínica real, equilibrando velocidade de operação, consistência e legibilidade em fluxos densos.',
     productDecisions: [
-      'Priorizar módulos de maior impacto diário antes de funcionalidades secundárias.',
-      'Navegação orientada pela rotina da equipe, não pela estrutura interna do sistema.',
-      'Dashboard inicial com indicadores acionáveis para reduzir tempo de interpretação.',
+      'Dashboard com leitura rápida para apoiar ação imediata em ocupação, faturamento, pendências e fila clínica.',
+      'Módulos organizados por rotina operacional (cadastro, atendimento, vacinação, venda e gestão) sem quebrar continuidade.',
+      'Integração entre prontuário, vacinas e PDV para reduzir retrabalho e preservar contexto entre clínica e cobrança.',
+      'Priorização de tarefas críticas e estados claros para reduzir troca de contexto em dias de alta demanda.',
     ],
     technicalChallenges: [
-      'Garantir consistência de dados e comportamento entre módulos com regras distintas.',
-      'Sustentar performance em telas com alto volume de dados e múltiplos estados de integração.',
-      'Evoluir funcionalidades sem quebrar contratos de fluxo e componentes existentes.',
+      'Manter consistência de estados e regras entre módulos com ciclos diferentes (agenda, atendimento, vacinação, venda e financeiro).',
+      'Lidar com formulários clínicos densos e sincronização de dados sem degradar legibilidade e fluidez de uso.',
+      'Integrar OCR e ditado clínico ao fluxo de prontuário sem quebrar a experiência nem gerar registros imprecisos.',
+      'Sustentar evolução de escopo preservando contratos de dados e integração com Supabase (banco, auth e storage).',
     ],
     tradeOffs: [
       'Menos personalização visual para preservar velocidade e previsibilidade de uso.',
-      'Postergar relatórios avançados para manter o ciclo de entrega estável.',
+      'Priorização de automações com impacto operacional direto, deixando análises avançadas para ciclos posteriores.',
+      'Validação assistida em OCR e ditado antes de persistir dados para reduzir risco de erro em informação clínica.',
+    ],
+    technicalDeepDives: [
+      {
+        title: 'OCR aplicado à carteira de vacinação',
+        problem: 'Digitação manual de carteirinhas consumia tempo e aumentava risco de erro humano na transcrição do histórico.',
+        solution:
+          'Implementação de fluxo com upload de imagem, processamento com Tesseract.js, extração estruturada e revisão do usuário antes de gravar no módulo de vacinação.',
+        impact: 'Redução de tempo operacional, maior padronização de registros e histórico digital mais confiável.',
+      },
+      {
+        title: 'Ditado clínico com padronização de linguagem',
+        problem: 'Documentação manual do prontuário era lenta e variava bastante em terminologia.',
+        solution:
+          'Uso de Web Speech API para transcrição no navegador com preenchimento assistido e normalização de termos coloquiais para vocabulário clínico veterinário.',
+        impact: 'Ganho de velocidade na documentação e melhora de consistência técnica no prontuário eletrônico.',
+      },
+      {
+        title: 'Automação de orçamento conectada ao PDV',
+        problem: 'Converter diagnóstico em cobrança exigia várias etapas manuais entre clínica e financeiro.',
+        solution:
+          'Automação para sugerir kits de produtos/serviços com base no diagnóstico e lançamento no fluxo de venda/PDV.',
+        impact: 'Menos erro operacional, transição mais fluida entre atendimento e cobrança e maior rastreabilidade do fluxo.',
+      },
+    ],
+    automationFeatures: [
+      'OCR com extração assistida para transformar carteirinhas em registros estruturados.',
+      'Ditado clínico com preenchimento assistido para acelerar documentação do prontuário.',
+      'Sugestão de kits por diagnóstico para conectar conduta clínica ao fluxo comercial.',
+    ],
+    securityNotes: [
+      'Autenticação integrada para controle de acesso por perfil de uso.',
+      'Segregação de dados por clínica (multi-tenant) com políticas de RLS e filtro por clinic_id.',
+      'Uso de Storage controlado com buckets privados para proteger anexos e documentos.',
+      'Modelagem orientada à privacidade e alinhamento com boas práticas de segurança/LGPD.',
+    ],
+    operationalImpacts: [
+      'Redução de burocracia e de retrabalho em tarefas clínicas e administrativas.',
+      'Menor incidência de erro humano em registros de vacinação e documentação clínica.',
+      'Mais velocidade na rotina com transição contínua entre atendimento, estoque, venda e financeiro.',
+      'Aumento de rastreabilidade e visão operacional com dashboard e relatórios.',
     ],
     outcome:
-      'O sistema aumentou a previsibilidade operacional e reduziu ruído entre atendimento, caixa, estoque e acompanhamento financeiro.',
+      'O TOGO consolidou clínica e gestão em uma plataforma única, com mais rastreabilidade, menos ruído operacional e apoio real à decisão diária.',
     learnings: [
-      'Produto operacional exige modelagem de fluxo orientada por tempo de decisão.',
-      'Integração consistente entre módulos reduz custo de manutenção e retrabalho.',
-      'Entrega incremental com prioridade clara mantém qualidade mesmo com escopo amplo.',
+      'Modelagem de fluxo ponta a ponta é determinante para reduzir atrito em sistema operacional real.',
+      'Automação útil precisa de validação humana em pontos críticos para preservar confiança do dado.',
+      'Segurança multi-tenant deve ser tratada desde o desenho inicial da arquitetura de dados.',
     ],
     gallery: [
       {
@@ -90,9 +148,9 @@ export const projects: Project[] = [
     featured: true,
     accent: 'blue',
     seo: {
-      title: 'TOGO | Case de sistema web para operação e integração de fluxo',
+      title: 'TOGO | Plataforma operacional veterinária com prontuário, OCR e automação',
       description:
-        'Case TOGO: sistema web para gestão clínica e comercial com foco em fluxo operacional, integração entre módulos e clareza de decisão.',
+        'Case TOGO: sistema web de gestão veterinária com prontuário eletrônico, integração entre módulos, OCR de vacinas, automações operacionais e segurança multi-tenant.',
       canonicalPath: '/projetos/togo',
       ogImage: '/projects/togo.jpeg',
     },

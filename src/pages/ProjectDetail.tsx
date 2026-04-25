@@ -176,6 +176,67 @@ export default function ProjectDetail() {
             </article>
           </section>
 
+          {(project.technicalDeepDives || project.automationFeatures || project.securityNotes || project.operationalImpacts) && (
+            <section className="space-y-6 border-t border-border/40 pt-8">
+              {project.technicalDeepDives && project.technicalDeepDives.length > 0 && (
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-semibold">Aprofundamento técnico</h2>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    {project.technicalDeepDives.map((item) => (
+                      <article key={item.title} className="rounded-2xl border border-border/38 bg-panel/20 p-5 md:p-6">
+                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <p className="mt-3 text-sm text-muted">
+                          <strong className="text-slate-200">Problema:</strong> {item.problem}
+                        </p>
+                        <p className="mt-2 text-sm text-muted">
+                          <strong className="text-slate-200">Solução:</strong> {item.solution}
+                        </p>
+                        <p className="mt-2 text-sm text-muted">
+                          <strong className="text-slate-200">Impacto:</strong> {item.impact}
+                        </p>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="grid gap-4 md:grid-cols-3">
+                {project.automationFeatures && project.automationFeatures.length > 0 && (
+                  <article className="rounded-2xl border border-border/38 bg-panel/20 p-5 md:p-6">
+                    <h2 className="text-lg font-semibold">Automação aplicada</h2>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+                      {project.automationFeatures.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                )}
+
+                {project.securityNotes && project.securityNotes.length > 0 && (
+                  <article className="rounded-2xl border border-border/38 bg-panel/20 p-5 md:p-6">
+                    <h2 className="text-lg font-semibold">Segurança e dados</h2>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+                      {project.securityNotes.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                )}
+
+                {project.operationalImpacts && project.operationalImpacts.length > 0 && (
+                  <article className="rounded-2xl border border-border/38 bg-panel/20 p-5 md:p-6">
+                    <h2 className="text-lg font-semibold">Impactos operacionais</h2>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+                      {project.operationalImpacts.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                )}
+              </div>
+            </section>
+          )}
+
           <section className="grid gap-8 border-t border-border/40 pt-8 md:grid-cols-2">
             <EditorialSection title="Resultado" body={project.outcome} />
             <section className="space-y-2">
