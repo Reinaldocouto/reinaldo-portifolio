@@ -44,7 +44,7 @@ export const site = {
     whatsappUrl: 'https://wa.me/5511995384270',
     githubUrl: 'https://github.com/Reinaldocouto',
     linkedinUrl: 'https://linkedin.com/in/reinaldo-couto',
-    resumeUrl: '/reinaldo_couto_cv.pdf',
+    resumeUrl: '/reinaldo_couto_cv_db.pdf',
   },
   hero: {
     eyebrow: 'Sistemas web, APIs e automação com contexto de produto e operação.',
@@ -59,7 +59,7 @@ export const site = {
     },
     secondaryCta: {
       label: 'Baixar currículo',
-      href: '/reinaldo_couto_cv.pdf',
+      href: '/reinaldo_couto_cv_db.pdf',
     },
     socialLinks: [
       { label: 'GitHub', href: 'https://github.com/Reinaldocouto' },
@@ -156,7 +156,7 @@ export const site = {
       { label: 'WhatsApp', value: '(11) 99538-4270', href: 'https://wa.me/5511995384270' },
       { label: 'LinkedIn', value: 'linkedin.com/in/reinaldo-couto', href: 'https://linkedin.com/in/reinaldo-couto' },
       { label: 'GitHub', value: 'github.com/Reinaldocouto', href: 'https://github.com/Reinaldocouto' },
-      { label: 'Currículo', value: 'PDF atualizado', href: '/reinaldo_couto_cv.pdf' },
+      { label: 'Currículo', value: 'PDF atualizado', href: '/reinaldo_couto_cv_db.pdf' },
     ] satisfies ContactChannel[],
   },
   footer: {
