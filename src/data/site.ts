@@ -43,7 +43,7 @@ export const site = {
     phone: '(11) 99538-4270',
     whatsappUrl: 'https://wa.me/5511995384270',
     githubUrl: 'https://github.com/Reinaldocouto',
-    linkedinUrl: 'https://linkedin.com/in/reinaldo-couto',
+    linkedinUrl: 'https://linkedin.com/in/reinaldocouto',
     resumeUrl: '/reinaldo_couto_cv_db.pdf',
   },
   hero: {
@@ -63,7 +63,7 @@ export const site = {
     },
     socialLinks: [
       { label: 'GitHub', href: 'https://github.com/Reinaldocouto' },
-      { label: 'LinkedIn', href: 'https://linkedin.com/in/reinaldo-couto' },
+      { label: 'LinkedIn', href: 'https://linkedin.com/in/reinaldocouto' },
       { label: 'WhatsApp', href: 'https://wa.me/5511995384270' },
     ],
     profileCard: {
@@ -154,7 +154,7 @@ export const site = {
     channels: [
       { label: 'E-mail', value: 'reinaldocouto10@gmail.com', href: 'mailto:reinaldocouto10@gmail.com' },
       { label: 'WhatsApp', value: '(11) 99538-4270', href: 'https://wa.me/5511995384270' },
-      { label: 'LinkedIn', value: 'linkedin.com/in/reinaldo-couto', href: 'https://linkedin.com/in/reinaldo-couto' },
+      { label: 'LinkedIn', value: 'linkedin.com/in/reinaldocouto', href: 'https://linkedin.com/in/reinaldocouto' },
       { label: 'GitHub', value: 'github.com/Reinaldocouto', href: 'https://github.com/Reinaldocouto' },
       { label: 'Currículo', value: 'PDF atualizado', href: '/reinaldo_couto_cv_db.pdf' },
     ] satisfies ContactChannel[],
